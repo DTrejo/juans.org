@@ -32,6 +32,9 @@ c5=#FA6900
 #351330 #424254 #64908A #E8CAA4 #CC2A41
 */
 
+//
+// light scheme
+//
 $text-color = #222
 $heading-color = #FA6900
 $background-color = #E0E4CC // #ddd
@@ -39,10 +42,14 @@ $background-color = #E0E4CC // #ddd
 $even-color = #69D2E7 // 'lightblue'
 $odd-color = #A7DBD8 // 'khaki'
 
-$header-color = invert($text-color)
+//
+// dark scheme
+//
+$text-color-on-dark = #E0E4CC
+$header-color = $text-color-on-dark
 $header-backgound-color = invert($background-color)
 
-$footer-color = invert($text-color)
+$footer-color = $text-color-on-dark
 $footer-background-color = invert($background-color)
 
 html
