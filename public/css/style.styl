@@ -1,0 +1,94 @@
+@require "normalize"
+
+/*!
+=== */
+
+c1=#69D2E7
+c2=#A7DBD8
+c3=#E0E4CC
+c4=#F38630
+c5=#FA6900
+
+/*
+#69D2E7 #A7DBD8 #E0E4CC #F38630 #FA6900
+#FE4365 #FC9D9A #F9CDAD #C8C8A9 #83AF9B
+#ECD078 #D95B43 #C02942 #542437 #53777A
+#556270 #4ECDC4 #C7F464 #FF6B6B #C44D58
+#774F38 #E08E79 #F1D4AF #ECE5CE #C5E0DC
+#E8DDCB #CDB380 #036564 #033649 #031634
+#490A3D #BD1550 #E97F02 #F8CA00 #8A9B0F
+#594F4F #547980 #45ADA8 #9DE0AD #E5FCC2
+#00A0B0 #6A4A3C #CC333F #EB6841 #EDC951
+#E94E77 #D68189 #C6A49A #C6E5D9 #F4EAD5
+#D9CEB2 #948C75 #D5DED9 #7A6A53 #99B2B7
+#FFFFFF #CBE86B #F2E9E1 #1C140D #CBE86B
+#EFFFCD #DCE9BE #555152 #2E2633 #99173C
+#3FB8AF #7FC7AF #DAD8A7 #FF9E9D #FF3D7F
+#413E4A #73626E #B38184 #F0B49E #F7E4BE
+#343838 #005F6B #008C9E #00B4CC #00DFFC
+#99B898 #FECEA8 #FF847C #E84A5F #2A363B
+#554236 #F77825 #D3CE3D #F1EFA5 #60B99A
+#FF4E50 #FC913A #F9D423 #EDE574 #E1F5C4
+#351330 #424254 #64908A #E8CAA4 #CC2A41
+*/
+
+$text-color = #222
+$heading-color = #FA6900
+$background-color = #E0E4CC // #ddd
+
+$even-color = #69D2E7 // 'lightblue'
+$odd-color = #A7DBD8 // 'khaki'
+
+$header-color = invert($text-color)
+$header-backgound-color = invert($background-color)
+
+$footer-color = invert($text-color)
+$footer-background-color = invert($background-color)
+
+html
+  font-size 125%
+
+body
+  font-family "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  margin 0
+  color $text-color
+  background-color $background-color
+
+h1, h2, h3, h4, h5, h6, li, p
+  text-rendering: optimizeLegibility
+
+h1
+  width 33rem
+  margin-left auto
+  margin-right auto
+  font-weight 200
+
+h1 a
+  text-decoration none
+  color inherit
+
+header, section, footer
+  padding 3rem 0rem
+  & > p, & > h2, & > h3, & > form
+      width 33rem
+      margin-left auto
+      margin-right auto
+
+header
+  color $header-color
+  background $header-backgound-color url("/images/overlay-texture.png")
+
+section
+  &:nth-of-type(even)
+    background-color $even-color
+  &:nth-of-type(odd)
+    background-color $odd-color
+
+h2
+  font-weight bold
+  font-variant small-caps
+  color $heading-color
+
+footer
+  color $footer-color
+  background $footer-background-color url('/images/triangle-stack.svg') bottom center no-repeat;

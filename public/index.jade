@@ -1,0 +1,26 @@
+extends __layout
+
+append vars
+  - var name = "Juan Andrés Gonzalez Trejo"
+
+block head
+  title #{name}
+  link(rel="stylesheet" href="/css/style.css" type="text/css")
+
+block body
+  header
+    h1
+      a(href="/") #{name}
+  section
+    h2 Project 1
+    p hello
+  section
+    h2 Project 2
+    p why
+  footer
+    p
+      &copy; 2014 #{name}
+
+block bodyscripts
+  //- script(src="/js/jquery.js")
+  //- script(src="/js/index.js")

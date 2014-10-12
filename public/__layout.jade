@@ -1,0 +1,16 @@
+block vars
+doctype html5
+html
+  head
+    //- link(rel="stylesheet", href="/main.css")
+    block head
+      //- head goes here
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  body
+    block body
+      //- body goes here
+    block bodyscripts
+      //- end of body scripts go here
