@@ -4,7 +4,8 @@
     "start": "harp server public",
     "pages": "harp server pages -p 8888",
     "compile": "harp compile public/ pages/",
-    "deploy": "cd pages; git add .; git commit -m 'deploy'; git push origin"
+    "push-pages": "cd pages; git add .; git commit -m 'deploy'; git push origin",
+    "deploy": "npm run compile && npm run push-pages"
   },
   "version": "1.0.0",
   "engines": {
