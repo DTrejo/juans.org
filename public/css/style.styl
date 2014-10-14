@@ -32,22 +32,24 @@ c5=#FA6900
 //
 // light scheme
 //
-$text-color = #222
-$heading-color = #FA6900
-$background-color = #E0E4CC // #ddd
 
-$even-color = #69D2E7 // 'lightblue'
-$odd-color = #A7DBD8 // 'khaki'
+$text-color =         #262715 // e.g. black
+$heading-color =      #571e11//#4a5c67 // e.g. red
+$background-color =   #02190c // e.g. light gray
+$text-color-on-dark = lighten(#356d44, 30%)
+
+$even-color =       tint(#356d44, 85%) //#f7f9f3   // e.g. 'lightblue'
+$odd-color =        tint(#356d44, 90%) // #eff3eb   // e.g. 'khaki'
+// very ha http://learnboost.github.io/stylus/docs/bifs.html
 
 //
 // dark scheme
 //
-$text-color-on-dark = #E0E4CC
 $header-color = $text-color-on-dark
-$header-backgound-color = invert($background-color)
+$header-backgound-color = $background-color
 
 $footer-color = $text-color-on-dark
-$footer-background-color = invert($background-color)
+$footer-background-color = darken($background-color, 15%)
 
 html
   font-size 125%
@@ -56,7 +58,6 @@ body
   font-family "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
   margin 0
   color $text-color
-  background-color $background-color
 
 h1, h2, h3, h4, h5, h6, li, p
   text-rendering: optimizeLegibility
@@ -84,9 +85,9 @@ header
 
 section
   &:nth-of-type(even)
-    background-color $even-color
+    background $even-color // url("/images/overlay-texture.png")
   &:nth-of-type(odd)
-    background-color $odd-color
+    background $odd-color // url("/images/overlay-texture.png")
 
 h2
   font-weight bold
