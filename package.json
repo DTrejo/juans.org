@@ -2,16 +2,16 @@
   "name": "juanandres",
   "scripts": {
     "start": "harp server public",
-    "pages": "harp server pages -p 8888",
-    "compile": "harp compile public/ pages/",
-    "push-pages": "cd pages; git add .; git commit -m 'deploy'; git push origin",
-    "deploy": "npm run compile && npm run push-pages"
+    "compile": "harp compile ./public -o ../www",
+    "buildbranch": "buildbranch gh-pages www",
+    "deploy": "npm run compile && npm run buildbranch"
   },
   "version": "1.0.0",
   "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
+    "buildbranch": "0.0.3",
     "harp": "^0.14.0"
   },
   "private": true
